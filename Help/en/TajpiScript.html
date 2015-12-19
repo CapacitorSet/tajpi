@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Tajpi - Script</title>
+<link rel="stylesheet" href="./styles.css" type="text/css"/>
+</head>
+<body>
+<a href="Index.html" title="Home"><img class="home_icon" alt="Home" src="./flago.png" align="left" /></a>
+<span class="title">
+<em>Tajpi</em> - Esperanto Keyboard<br />
+Scripting the program
+</span>
+<br />
+<br />
+<p>
+Tajpi Script provides advanced configuration and text conversion/input utilities. It uses a simple syntax to configure
+hotkeys which can be activated at any time from the keyboard. The script file is called <tt>Tajpi.skr</tt>
+and resides in the Tajpi program folder.
+</p>
+<p>
+In the following example, the hotkey
+<tt>Ctrl+R</tt> is configured to activate/deactivate Russian transliteration. The caret sign [^] stands
+for the <tt>Ctrl</tt> key, which is known as a <em>modifier</em>:
+</p>
+<pre>^R::rusa</pre>
+<p>
+To use more than one modifier with a hotkey, list them consecutively (the order doesn't matter). The following example uses
+^!S to indicate <tt>Ctrl+Alt+S</tt>, and activates cyrillic transliteration:
+</p>
+<pre>^!S::cirila</pre>
+<p>
+You can use the following modifier symbols to define hotkeys:
+</p>
+<table class="info">
+<tr>
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><strong>!</strong></td>
+<td>Alt</td>
+</tr>
+<tr>
+<td><strong>^</strong></td>
+<td>Control</td>
+</tr>
+<tr>
+<td><strong>+</strong></td>
+<td>Shift</td>
+</tr>
+<tr>
+<td><strong>&lt;</strong></td>
+<td>Use the left key of the pair. e.g. &lt;!a is the same as !a except
+that only the left Alt key will trigger it.</td>
+</tr>
+<tr>
+<td><strong>&gt;</strong></td>
+<td>Use the right key of the pair.</td>
+</tr>
+</table>
+<p>It is possible to completely leave out modifiers from a hotkey and just bind to a single key. For example the
+following hotkey will show the configuration window when pressing <tt>F12</tt>:
+</p>
+<pre>F12::agordi</pre>
+<p>Tajpi Script is case insensitive. The following hotkey pairs have exactly the same effect:</p>
+<pre>
+^+a::agordi
+^+A::AGORDI
+
+>!sPaCe::cIRIla
+>!SpAcE::CiriLA
+</pre>
+<p>
+Anything after a semicolon is treated as a comment, and will be ignored:
+</p>
+<pre>;this is a comment
+^+insert::rusa  ;this hotkey is active
+;^+space::rusa   and this one is not
+</pre>
+<p>
+The name of the key to bind to should be spelt according to the drop down list at the bottom of the
+Tajpi configuration window (spaces may be left out however). When amending a script remember to save it and restart Tajpi.
+</p>
+<p>
+The following commands may be used in your hotkeys:
+</p>
+<table class="info">
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><strong>cirila</strong></td>
+<td>Activates/deactivates Cirilic transliteration. When an Esperanto letter is typed, it will
+automatically appear as the most phonetically equivalent letter from the Cirilic alphabet. The following scheme is used:
+<table class="transliteration">
+<tr>
+<td>a<br/>а</td><td>b<br/>б</td><td>c<br/>ц</td><td>ĉ<br/>ч</td><td>d<br/>д</td><td>e<br/>е</td><td>f<br/>ф</td><td>g<br/>г</td><td>ĝ<br/>ѓ</td><td>h<br/>х</td><td>ĥ<br/>ћ</td><td>i<br/>и</td><td>j<br/>й</td><td>ĵ<br/>ж</td><td>k<br/>к</td><td>l<br/>л</td><td>m<br/>м</td><td>n<br/>н</td><td>o<br/>о</td><td>p<br/>п</td><td>r<br/>р</td><td>s<br/>с</td><td>ŝ<br/>ш</td><td>t<br/>т</td><td>u<br/>у</td><td>ŭ<br/>ў</td><td>v<br/>в</td><td>z<br/>з</td>
+</tr>
+<tr>
+<td>A<br/>А</td><td>B<br/>Б</td><td>C<br/>Ц</td><td>Ĉ<br/>Ч</td><td>D<br/>Д</td><td>E<br/>Е</td><td>F<br/>Ф</td><td>G<br/>Г</td><td>Ĝ<br/>Ѓ</td><td>H<br/>Х</td><td>Ĥ<br/>Ћ</td><td>I<br/>И</td><td>J<br/>Й</td><td>Ĵ<br/>Ж</td><td>K<br/>К</td><td>L<br/>Л</td><td>M<br/>М</td><td>N<br/>Н</td><td>O<br/>О</td><td>P<br/>П</td><td>R<br/>Р</td><td>S<br/>С</td><td>Ŝ<br/>Ш</td><td>T<br/>Т</td><td>U<br/>У</td><td>Ŭ<br/>Ў</td><td>V<br/>В</td><td>Z<br/>З</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><strong>rusa</strong></td>
+<td>Activates/deactivates Russian transliteration. When an Esperanto letter is typed, it will
+automatically appear as the most phonetically equivalent letter (or combination of letters) from the Russian alphabet. The following scheme is used,
+with the differences to the Cirilic scheme shown in red:
+<table class="transliteration">
+<tr>
+<td>a<br/>а</td><td>b<br/>б</td><td>c<br/>ц</td><td>ĉ<br/>ч</td><td>d<br/>д</td><td>e<br/>е</td><td>f<br/>ф</td><td>g<br/>г</td><td>ĝ<br/><span style="color:Red">дж</span></td><td>h<br/>х</td><td>ĥ<br/><span style="color:Red">х</span></td><td>i<br/>и</td><td>j<br/>й</td><td>ĵ<br/>ж</td><td>k<br/>к</td><td>l<br/>л</td><td>m<br/>м</td><td>n<br/>н</td><td>o<br/>о</td><td>p<br/>п</td><td>r<br/>р</td><td>s<br/>с</td><td>ŝ<br/>ш</td><td>t<br/>т</td><td>u<br/>у</td><td>ŭ<br/><span style="color:Red">у</span></td><td>v<br/>в</td><td>z<br/>з</td>
+</tr>
+<tr>
+<td>A<br/>А</td><td>B<br/>Б</td><td>C<br/>Ц</td><td>Ĉ<br/>Ч</td><td>D<br/>Д</td><td>E<br/>Е</td><td>F<br/>Ф</td><td>G<br/>Г</td><td>Ĝ<br/><span style="color:Red">ДЖ</span></td><td>H<br/>Х</td><td>Ĥ<br/><span style="color:Red">Х</span></td><td>I<br/>И</td><td>J<br/>Й</td><td>Ĵ<br/>Ж</td><td>K<br/>К</td><td>L<br/>Л</td><td>M<br/>М</td><td>N<br/>Н</td><td>O<br/>О</td><td>P<br/>П</td><td>R<br/>Р</td><td>S<br/>С</td><td>Ŝ<br/>Ш</td><td>T<br/>Т</td><td>U<br/>У</td><td>Ŭ<br/><span style="color:Red">У</span></td><td>V<br/>В</td><td>Z<br/>З</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><strong>ssigi_elektitan</strong></td>
+<td>Converts the currently selected text from X-system to diacritical Esperanto letters. Can be used in a text box or
+any text editor program such as Word or Notepad.</td>
+</tr>
+<tr>
+<td><strong>ssigi_tondujon</strong></td>
+<td>Converts text held in the clipboard from X-system to diacritical Esperanto letters.</td>
+</tr>
+<tr>
+<td><strong>xigi_elektitan</strong></td>
+<td>Converts any diacritical Esperanto letters in the currently selected text to X-system.</td>
+</tr>
+<tr>
+<td><strong>xigi_tondujon</strong></td>
+<td>Converts any diacritical Esperanto letters in the text held in the clipboard to X-system.</td>
+</tr>
+<tr>
+<td><strong>higi_elektitan</strong></td>
+<td>Converts any diacritical Esperanto letters in the currently selected text to H-system.</td>
+</tr>
+<tr>
+<td><strong>higi_tondujon</strong></td>
+<td>Converts any diacritical Esperanto letters in the text held in the clipboard to H-system.</td>
+</tr>
+<tr>
+<td><strong>htmligi_elektitan</strong></td>
+<td>Converts all symbols in the currently selected text to HTML entity codes. This can also be useful for determining
+the Unicode code-point value of a particular symbol, or series of symbols.</td>
+</tr>
+<tr>
+<td><strong>htmligi_tondujon</strong></td>
+<td>Converts all symbols in the text held in the clipboard to HTML entity codes.</td>
+</tr>
+<tr>
+<td><strong>###</strong></td>
+<td>The command may be a numerical value representing any Unicode symbol to be input to the system. The following
+hotkey inputs Ĉ upon pressing <tt>Ctrl+Alt+C</tt>:
+<pre>^!C::264</pre>
+It is possible to specify a hexadecimal value by prepending with "&H". The following hotkey sends the ♥ symbol:
+<pre>^!H::&H2665</pre>
+You can also send multiple symbols with one hotkey by delimiting the codes with a comma. The following sends
+<em>AAA</em>:
+<pre>^!A::65,65,65</pre>
+See <a href="http://www.unicode.org/charts/">here</a> for a complete list of Unicode symbols.
+</td>
+</tr>
+<tr>
+<td><strong>_[text]</strong></td>
+<td>The command may be a peice of literal text to be input to the system, which must be prefixed with an underscore.
+The following hotkey inputs <em>eĥoŝanĝo ĉiuĵaŭde</em> when pressing <tt>Alt+E</tt>:
+<pre>!E::_eĥoŝanĝo ĉiuĵaŭde</pre>
+Escape sequences may be used: \n for newline and \t for tab. Backslashes and semicolons must be escaped with a
+backslash in front of them.
+</td>
+</tr>
+<tr>
+<td><strong>agordi</strong></td>
+<td>Shows the Tajpi configuration window.</td>
+</tr>
+<tr>
+<td><strong>alglui</strong></td>
+<td>Toggles the option "Paste out of clipboard" in the configuration window.</td>
+</tr>
+<tr>
+<td><strong>english</strong></td>
+<td>Changes the interface language to English.</td>
+</tr>
+<tr>
+<td><strong>esperanto</strong></td>
+<td>Changes the interface language to Esperanto.</td>
+</tr>
+<tr>
+<td><strong>eliri</strong></td>
+<td>Quits Tajpi.</td>
+</tr>
+<tr>
+<td><strong>helpo</strong></td>
+<td>Shows the help file in the current interface language.</td>
+</tr>
+<tr>
+<td><strong>helpo_en</strong></td>
+<td>Shows the English help file.</td>
+</tr>
+<tr>
+<td><strong>helpo_eo</strong></td>
+<td>Shows the Esperanto help file.</td>
+</tr>
+<tr>
+<td><strong>html</strong></td>
+<td>Toggles the option "HTML entity codes" in the configuration window.</td>
+</tr>
+<tr>
+<td><strong>klavkomando</strong></td>
+<td>Activates/deactivates Tajpi. A hotkey for this is already present in the Tajpi configuration window, however you
+can add others with this command.</td>
+</tr>
+<tr>
+<td><strong>latina3</strong></td>
+<td>Sets the option "Latin-3" in the configuration window.</td>
+</tr>
+<tr>
+<td><strong>pri_tajpi</strong></td>
+<td>Shows the "About Tajpi" window.</td>
+</tr>
+<tr>
+<td><strong>skripto</strong></td>
+<td>Toggles TajpiScript on and off. Only this command will be recognized when TajpiScript is disabled.</td>
+</tr>
+<tr>
+<td><strong>unikodo</strong></td>
+<td>Sets the option "Unicode" in the configuration window.</td>
+</tr>
+</table>
+<p>
+After editing the script you must save the script file and restart Tajpi. Note that TajpiScript recognizes ASCII and UTF-8
+file formats only. Unicode formats other than UTF-8 are not supported.
+</p>
+<br />
+<ul>
+<li class="li_links"><a href="Configuration.html">← Configuration</a></li>
+</ul>
+<br />
+<hr />
+<table class="bottom">
+<tr>
+<td>
+© 2008-2012 Thomas James
+</td>
+<td align="right">
+Last updated 26-Feb-2011
+</td>
+</tr>
+<tr>
+<td>
+<a href="mailto:tmj2005@gmail.com">tmj2005@gmail.com</a>
+</td>
+</tr>
+</table>
+</body>
+</html>

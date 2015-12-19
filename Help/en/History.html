@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Tajpi - History</title>
+<link rel="stylesheet" href="./styles.css" type="text/css"/>
+</head>
+<body>
+<a href="Index.html" title="Home"><img class="home_icon" alt="Home" src="./flago.png" align="left" /></a>
+<span class="title">
+<em>Tajpi</em> - Esperanto Keyboard<br />
+Change history
+</span>
+<br />
+<br />
+<br />
+
+<strong>2.97</strong> <em>(26-Feb-12)</em>:
+<ul>
+<li>Added option "w por ŭ".</li>
+<li>Slightly modified the transliteration scheme for Russian/Cirilic letters. To see the new scheme, check the instructions for TajpiScript.</li>
+<li>Made some additions and corrections in the help files.</li>
+</ul>
+
+<strong>2.96</strong> <em>(15-Aug-11)</em>:
+<ul>
+<li>Removed the <tt>Win</tt> key from the list of modifier keys in TajpiScript.</li>
+</ul>
+
+<strong>2.95</strong> <em>(14-Aug-11)</em>:
+<ul>
+<li>Added "htmligi_elektitan" and "htmligi_tondujon" commands to TajpiScript.</li>
+</ul>
+
+<strong>2.94</strong> <em>(12-Aug-11)</em>:
+<ul>
+<li>TajpiScript now allows input of literal strings.</li>
+<li>Added "skripto" command to TajpiScript, which toggles TajpiScript on and off.</li>
+<li>Fixed a bug which caused a problem when processing script files saved in ANSI format.</li>
+</ul>
+
+<strong>2.93</strong> <em>(10-Aug-11)</em>:
+<ul>
+<li>TajpiScript now allows multiple Unicode symbols to be specified in one hotkey by delimiting with a comma.</li>
+<li>Fixed a bug in TajpiScript which disabled some Win-key shortcuts in Windows.</li>
+<li>Corrected a mistake in the Esperanto TajpiScript help file. Command "halti" now reads "eliri".</li>
+</ul>
+
+<strong>2.92</strong> <em>(08-Aug-11)</em>:
+<ul>
+<li>Fixed a bug in TajpiScript, whereby pressing the Win key would still show the start menu even if it been
+bound to a hotkey.</li>
+</ul>
+
+<strong>2.91</strong> <em>(07-Aug-11)</em>:
+<ul>
+<li>Added "Tajpi Script" feature. See configuration help page for usage instructions.</li>
+<li>Transliteration of Russian / Cyrillic letters is now handled by Tajpi Script and is disabled by default. To activate it,
+uncomment the appropriate lines in Tajpi.skr in the Tajpi folder and configure your preferred keystroke.</li>
+<li><tt>Ctrl+Alt</tt> can now be used as an alternative to <tt>Alt Gr</tt> on keyboards that
+don't have that key.</li>
+<li>Cleaned up HTML in help files and corrected several typos.</li>
+<li>Corrected some text in the Tajpi interface.</li>
+<li>Fixed a small bug in the activation/deactivation hotkey.</li>
+<li>Some source code cleanup.</li>
+</ul>
+
+<strong>2.90</strong> <em>(13-Apr-11)</em>:
+<ul>
+<li>Corrected spelling error on configuration window: "Automata aŭ/eŭ" to "A<strong>ŭ</strong>tomata aŭ/eŭ".</li>
+</ul>
+
+<strong>2.89</strong> <em>(08-Apr-11)</em>:
+<ul>
+<li>Fixed a small bug which caused the option "Repeat of suffix removes diacritic" to work incorrectly in some circumstances.</li>
+</ul>
+
+<strong>2.88</strong> <em>(07-Apr-11)</em>:
+<ul>
+<li>Fixed a huge bug which caused accents to appear in some multithreaded applications, even when a keyboard layout was being
+used that does not contain accentable Esperanto letters. Thanks to Valentin Melnikov for reporting and assisting in fixing this bug.</li>
+<li>Fixed a bug which would sometimes cause the taskbar menu to be shown on top of the Tajpi menu, when right clicking the system
+tray icon.</li>
+<li>Fixed a bug which sometimes stopped the option "Repeat of suffix gets rid of accent" from working correctly.</li>
+<li>Reversed the sound effects for enable/disable of the program.</li>
+<li>Added an icon for Tajpi in "Add/Remove Programs".</li>
+<li>Added further support for complex dead-key composite combinations.</li>
+<li>Large clean up of source code.</li>
+</ul>
+
+<strong>2.87</strong> <em>(23-Mar-11)</em>:
+<ul>
+<li>Fixed a bug introduced in a previous version which made it impossible to type a non-alpha character into certain fields in
+the configuration window.</li>
+</ul>
+
+<strong>2.86</strong> <em>(23-Mar-11)</em>:
+<ul>
+<li>Added the ability to easily input a character that is configured as a direct key, by way of <tt>Alt Gr</tt>.</li>
+<li>The option "Alt Gr + letter to receive diacritic" is now fully compatible with "Paste letter out of clipboard".</li>
+<li>Fixed a small bug which caused the milliseconds textbox in the "Paste Method" window to be uneditable even when the option
+"Restore clipboard contents after paste" was selected.</li>
+</ul>
+
+<strong>2.85</strong> <em>(22-Mar-11)</em>:
+<ul>
+<li>Fixed a long standing bug which caused accents to sometimes not appear when the option "Paste out of clipboard" was selected
+together with the sub option <tt>Ctrl+V</tt>.</li>
+<li>Russian/Cyrillic transliteration now deactivates when the program is enabled/disabled.</li>
+<li>The option "Restore clipboard after paste" is now selected by default.</li>
+<li>Fixed a bug which prevented deletion of a direct key from the configuration window, when <tt>Caps Lock</tt>
+was active.</li>
+<li>Cleaned up source code.</li>
+</ul>
+
+<strong>2.84</strong> <em>(20-Mar-11)</em>:
+<ul>
+<li>Fixed a bug which caused non-alpha direct keys to function incorrectly if <tt>Shift</tt> was pressed or
+<tt>Caps Lock</tt> enabled.</li>
+</ul>
+
+<strong>2.83</strong> <em>(18-Mar-11)</em>:
+<ul>
+<li>Fixed a bug which caused Tajpi to sometimes remain running in the background after quitting the program.</li>
+<li>Fixed an error message in the installer which would appear if the program was already running due to the above bug.</li>
+<li>Fixed a small issue which would sometimes cause an accented character not to appear if <tt>Alt Gr</tt>
+had just been used to accent some other character.</li>
+</ul>
+
+<strong>2.82</strong> <em>(18-Mar-11)</em>:
+<ul>
+<li>Fixed a bug which caused a conflict with the dead keys in some keyboard layouts.</li>
+</ul>
+
+<strong>2.81</strong> <em>(17-Mar-11)</em>:
+<ul>
+<li>Fixed a bug which caused Latin-3 characters to only be correctly inserted if the option "Paste out of Clipboard"
+was selected.</li>
+<li>Changed activation method for Russian/Cirilic transliteration to make it less accidentally triggerable. Key press
+is now <tt>Right Ctrl</tt> 3 times followed by <tt>Numpad 7</tt> for Russian, or <tt>Numpad 8</tt> for Cirilic.</li>
+</ul>
+
+<strong>2.80</strong> <em>(01-Sep-09)</em>:
+<ul>
+<li>Simplified and updated the help files.</li>
+</ul>
+
+<strong>2.79</strong> <em>(26-Aug-09)</em>:
+<ul>
+<li>Fixed a bug which caused a conflict with the <tt>Shift</tt> key on certain computers.</li>
+</ul>
+
+<strong>2.78</strong> <em>(19-Aug-09)</em>:
+<ul>
+<li>Fixed a bug which caused the program to function incorrectly in Windows 7.</li>
+</ul>
+
+<strong>2.77</strong> <em>(07-Aug-09)</em>:
+<ul>
+<li>Fixed a bug which caused problems with the <tt>Shift</tt> key in Windows Vista.</li>
+<li>Fixed a small bug in the "About Tajpi" window which caused Esperanto text to appear without accents.</li>
+</ul>
+
+<strong>2.76</strong> <em>(06-Aug-09)</em>:
+<ul>
+<li>Fixed a bug which caused the "Repeat of suffix gets rid of accent" option to work incorrectly in Windows Vista.</li>
+</ul>
+
+<strong>2.75</strong> <em>(04-Aug-09)</em>:
+<ul>
+<li>Added the ability to change the language of the interface, and help file. It is now possible to select between
+Esperanto and English by clicking on the icons in the configuration window.</li>
+<li>Added the text "Aktiva" to the tooltip of the tray icon. In active mode, the tooltip appeared as "Tajpi".
+It now reads as "Tajpi - Aktiva".</li>
+<li>Fixed a few small bugs.</li>
+<li>General cleanup of source code.</li>
+<li>Updated the help files.</li>
+</ul>
+
+<strong>2.74</strong> <em>(25-Jul-09)</em>:
+<ul>
+<li>Fixed a bug which caused an error box to appear when closing the program, with the message
+"Run-time error '424': Object required."</li>
+</ul>
+
+<strong>2.73</strong> <em>(24-Jul-09)</em>:
+<ul>
+<li>Fixed a bug which caused the "Paste Method" window to crash the program when it appeared, on certain computers.</li>
+</ul>
+
+<strong>2.72</strong> <em>(23-Jul-09)</em>:
+<ul>
+<li>Fixed a nasty bug when caused the program to crash upon startup leaving the icon in the system tray, which would
+disappear upon hovering over it with the mouse.</li>
+<li>A few corrections to Esperanto text in the program interface.</li>
+<li>Updated the help files.</li>
+</ul>
+
+<strong>2.71</strong> <em>(23-Jun-09)</em>:
+<ul>
+<li>A few updates / corrections to text in the program and help files.</li>
+<li>Changed the default state of the "Start automatically" option. It is now selected by default.</li>
+<li>Added an option to start up Tajpi upon completion of the installation process.</li>
+</ul>
+
+<strong>2.7</strong> <em>(23-Jun-09)</em>:
+<ul>
+<li>Several corrections to text in the program interface and help files.</li>
+<li>Added the ability to specify the method Tajpi uses when pasting the accented letter out of the clipboard, and the
+ability to restore the clipboard contents after the paste.</li>
+<li>Tajpi now makes a beep when enabled / disabled.</li>
+<li>Fixed a bug which caused the program to close when the configuration window was closed by the menu in the window's
+top left corner icon, or by some other means such as a reprogrammed mouse button.</li>
+<li>The installer / uninstaller will now close Tajpi if it is already running. This ensures that the files can be properly
+deleted / overwritten in the installation / uninstallation process.</li>
+<li>Changed the behaviour of the "Repeat of suffix gets rid of accent" option. Now you have to press the same suffix key
+as the one that was used to accent the letter.</li>
+<li>Added <tt>Alt+key</tt> shortcuts to various controls of the configuration window, which had been
+accidentally left out.</li>
+<li>Big cleanup and reordering of the source code.</li>
+<li>Updated the help files.</li>
+</ul>
+
+<strong>2.68</strong> <em>(11-Jun-09)</em>:
+<ul>
+<li>Changed the input method of the secret keypresses again. Before you had to press <tt>LShift+RShift+key</tt>.
+But since that hinders one-handed users the new method is to press <tt>Ctrl</tt> 5 times (either left or right)
+and then press the key. So 5 x <tt>Ctrl</tt> and then <tt>R</tt> to switch to Russian cirilic letters.</li>
+<li>Cleaned up the source code a bit.</li>
+<li>Updated the help files.</li>
+</ul>
+
+<strong>2.67</strong> <em>(11-Jun-09)</em>:
+<ul>
+<li>Changed the secret keypresses method back to how it was before version 2.66.</li>
+</ul>
+
+<strong>2.66</strong> <em>(11-Jun-09)</em>:
+<ul>
+<li>Fixed a bug which caused the program to close if the configuration window was closed by double clicking the icon in the top
+left corner.</li>
+<li>Added more "secret keypresses". Press <tt>Shift</tt> twice and then <tt>S</tt>
+to show them.</li>
+</ul>
+
+<strong>2.65</strong> <em>(09-Jun-09)</em>:
+<ul>
+<li>Fixed a bug which caused general problems with the "Repeat of suffix gets rid of accent" option.</li>
+<li>Updated the help files.</li>
+</ul>
+
+<strong>2.64</strong> <em>(04-Jun-09)</em>:
+<ul>
+<li>When Tajpi starts up, if the program is already running it will be closed and the new process will replace it. This ensures
+there will only ever be one running instance of the program.</li>
+<li>Corrected the text in the configuration window "Latin-3" to "Latina-3" for the Esperanto interface.</li>
+<li>Updated the help files.</li>
+<li>From this version onwards Tajpi is now published with its source code under the conditions of the
+GNU <a href="http://www.gnu.org/copyleft/gpl.html">GPL</a> version 3 or any later version.</li>
+</ul>
+
+<strong>2.63</strong> <em>(18-May-09)</em>:
+<ul>
+<li>Fixed a bug accidentally introduced in version 2.62, concerning the cirilic transliterations of the Esperanto accented
+letters.</li>
+</ul>
+
+<strong>2.62</strong> <em>(17-May-09)</em>:
+<ul>
+<li>Fixed a few small bugs and general cleanup of source code.</li>
+</ul>
+
+<strong>2.61</strong> <em>(16-May-09)</em>:
+<ul>
+<li>Fixed a strange bug, apparently introduced in some previous version, which caused the "Repeat of suffix gets rid of accent"
+option to be totally ignored.</li>
+</ul>
+
+<strong>2.6</strong> <em>(15-May-09)</em>:
+<ul>
+<li>Added the ability to enter accented letters by way of the <tt>Alt Gr</tt> key. You can now press for
+example <tt>Alt G+C</tt> to enter ĉ.</li>
+</ul>
+
+<strong>2.5</strong> <em>(13-May-09)</em>:
+<ul>
+<li>Changed the keypress method for the hotkey that enables / disables the program.</li>
+<li>Corrected a bug which caused incorrect HTML entity codes to appear when typing in transliterated cirilic letters.</li>
+<li>Added a further input method for transliterated letters. Now you can press <tt>LShift+RShift+R</tt>
+for cirilic letters out of the Russian alphabet only.</li>
+</ul>
+
+<strong>2.41</strong> <em>(11-May-09)</em>:
+<ul>
+<li>Tajpi now recognizes Windows "dead keys" as prefixes for accented Esperanto letters. If the accentable letter belongs
+to both the Esperanto alphabet and the current system keymap, the Esperanto letter will take priority.</li>
+</ul>
+
+<strong>2.4</strong> <em>(09-May-09)</em>:
+<ul>
+<li>Added the ability to type in transliterated cirilic letters. To enable / disable this, press <tt>LShift+RShift+C</tt>.</li>
+</ul>
+
+<strong>2.3</strong> <em>(08-May-09)</em>:
+<ul>
+<li>Added the "Make the prefix letter invisible" option.</li>
+<li>Fixed a small bug, which caused the text boxes for the direct keys to fail to convert the entered letter to uppercase.</li>
+</ul>
+
+<strong>2.23</strong> <em>(07-May-09)</em>:
+<ul>
+<li>Fixed a bug which caused accented letters to appear even when the user had a system keymap that doesn't even contain
+the letters <tt>c</tt>, <tt>g</tt>, <tt>h</tt>, <tt>j</tt>, <tt>s</tt> or <tt>u</tt>.</li>
+<li>Changed the automatic keystroke to paste the letter out of the clipboard. <tt>Shift+Insert</tt> is now
+used instead as <tt>Ctrl+V</tt> appears to cause some problems in a few non European keymaps.</li>
+</ul>
+
+<strong>2.22</strong> <em>(07-May-09)</em>:
+<ul>
+<li>Recompiled the help files to a single .chm file.</li>
+</ul>
+
+<strong>2.21</strong> <em>(07-May-09)</em>:
+<ul>
+<li>Fixed another bug with the dead keys. Now it is possible to type a dead key + <tt>Space</tt> to show
+the dead key letter.</li>
+</ul>
+
+<strong>2.2</strong> <em>(06-May-09)</em>:
+<ul>
+<li>Fixed a nasty bug which caused a conflict with the "dead keys" which exist in some Windows keymaps, such as German,
+Brazilian etc.</li>
+<li>Corrected text in the tooltip of the Quick Launch Bar icon. Before it read "My Program". Changed to "Tajpi".</li>
+</ul>
+
+<strong>2.1</strong> <em>(04-May-09)</em>:
+<ul>
+<li>A few corrections to spelling/translation errors in the interface text.</li>
+<li>Improved the installer with options to put icons on the Desktop and Quick Launch Bar, and automatically delete the
+configuration file and registry keys which were previously being left behind in the uninstall.</li>
+</ul>
+
+<strong>2.0</strong> <em>(01-May-09)</em>:
+<ul>
+<li>Completely rewrote Tajpi in VB6, and added a new interface which more or less follows
+<a href="http://www.esperanto.mv.ru/Ek/index.html">Ek</a>, with general simplification.</li>
+<li>Now only compatible with Windows 2000, XP, Vista and 7. Tajpi does not support Win9x, ME or NT.</li>
+<li>Added the "Direct keys" option.</li>
+<li>Made "Repeat of suffix gets rid of accent" optional.</li>
+<li>Added the "Automatic aŭ/eŭ" option.</li>
+<li>Added the option to enter accented letters by either direct input or by pasting it out of the clipboard.</li>
+<li>Added the "Automatic start" option. This works by way of a registry key in
+<tt>HKEY_CURRENT_USER \ Software \ Microsoft \ Windows \ CurrentVersion \ Run \ Tajpi</tt>.</li>
+<li>Added the "Hotkey" to activate/deactivate the program.</li>
+<li>Created an installer for the program with <a href="http://www.innosetup.com/isinfo.php">Inno Setup</a>. The product is now
+a self extracting .exe file which installs the program and puts icons in the start menu and on the Desktop.</li>
+</ul>
+
+<strong>1.0</strong> <em>(08-Aug-08)</em>:
+<ul>
+<li>First version of Tajpi, built with <a href="http://www.autohotkey.com/">AutoHotkey</a>. This program and its change history
+are no longer available.</li>
+</ul>
+<ul>
+<li class="li_links"><a href="Installation.html">Installation</a></li>
+<li class="li_links"><a href="Configuration.html">Configuration</a></li>
+<li class="li_links"><a href="Index.html">← Home</a></li>
+</ul>
+<br />
+<hr />
+<table class="bottom">
+<tr>
+<td>
+© 2008-2012 Thomas James
+</td>
+<td align="right">
+Last updated 26-Feb-2012
+</td>
+</tr>
+<tr>
+<td>
+<a href="mailto:tmj2005@gmail.com">tmj2005@gmail.com</a>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿Licenso: Ĉi tiu programo estas libera softvaro; vi povas disdoni ĝin kaj/aŭ
+modifi ĝin sub la kondiĉoj de la GNU General Public License, eldonita de
+The Free Software Foundation; versio 3 de la licenso aŭ ajna pli nova versio.
+Ĉi tiu programo estas eldonata en espero ke ĝi troviĝos utila, sed SEN IU AJN
+GARANTIO; sen eĉ implicita garantio pri KOMERCEBLECO aŭ TAUĜECO POR SPECIFA CELO.
+Legu la GNU General Public License por pli da detaloj.
+
+Vi devintus ricevi kopion de The GNU General Public License kun ĉi tiu programo;
+se ne, skribu al The Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ Boston, MA  02111-1307, USA.
+
+Por ĝuste kompili Tajpi-on oni bezonas la jenajn ilojn:
+
+Por krei nur la programon:
+- Microsoft Visual Basic 6
+
+Por krei la tutan instalilon:
+- Microsoft Visual Basic 6
+- Inno Setup Compiler (http://www.innosetup.com/isinfo.php)
+- Microsoft HTML Help Workshop (http://office.microsoft.com/en-us/orkXP/HA011362801033.aspx)
+
+En kompilado de la instalilo, necesas krei la konsistigaĵojn en la jena ordo:
+
+1. Malfermu Tajpi.vbp per Visual Basic 6 kaj kompilu Tajpi.exe.
+2. Malfermu Help\Esperanto\Helpo.hhp per HTML Help Workshop kaj kompilu Helpo.chm.
+3. Malfermu Help\English\Helpo (angla).hhp per HTML Help Workshop kaj kompilu Helpo (angla).chm.
+4. Malfermu Install.iss per Inno Setup Compiler, kaj kompilu la skripton. Estos kreita "setup.exe" en la dosierujo "Output", kiu lokiĝas en la dosierujo de la fontkodoj.
+
+
+-----------------------------------------
+Tajpi v2.97 - Klavarilo por esperantistoj
+© 2008-2011 Thomas James
+tmj2005@gmail.com

@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Tajpi - Skripto</title>
+<link rel="stylesheet" href="./styles.css" type="text/css"/>
+</head>
+<body>
+<a href="Index.html" title="Home"><img class="home_icon" alt="Home" src="./flago.png" align="left" /></a>
+<span class="title">
+<em>Tajpi</em> - Klavarilo por esperantistoj<br />
+Skripto
+</span>
+<br />
+<br />
+<p>
+TajpiSkripto provizas pli potencan agordon kaj ilojn por konverti/enigi tekston. Ĝi uzas simplan sintakson por agordi
+klavkomandojn kiujn oni povas aktivigi iam ajn per la klavaro. La skripto-dosiero nomiĝas <tt>Tajpi.skr</tt>
+kaj restas en la dosierujo de la programo.
+</p>
+<p>
+En la jena ekzemplo, la klavkomando <tt>Ctrl+R</tt> ŝaltas/malŝaltas transliterumadon de rusaj literoj. La signo [^]
+reprezentas la klavon <tt>Ctrl</tt>, kiun oni nomas <em>modifilo</em>:
+</p>
+<pre>^R::rusa</pre>
+<p>
+Por uzi pli ol unu modifilon en klavkomando, apudigu ilin sinsekve (la ordo ne gravas). La jena ekzemplo uzas ^!S por indiki
+<tt>Ctrl+Alt+S</tt>, kaj aktivigas cirilan transliterumadon.</p>
+<pre>^!S::cirila</pre>
+<p>
+La jenaj modifilaj simboloj uzeblas por difini klavkomandon:
+</p>
+<table class="info">
+<tr>
+<th>Simbolo</th>
+<th>Priskribo</th>
+</tr>
+<tr>
+<td><strong>!</strong></td>
+<td>Alt</td>
+</tr>
+<tr>
+<td><strong>^</strong></td>
+<td>Control</td>
+</tr>
+<tr>
+<td><strong>+</strong></td>
+<td>Shift</td>
+</tr>
+<tr>
+<td><strong>&lt;</strong></td>
+<td>Uzi la maldekstran klavon el la paro. e.g. &lt;!a samas kiel !a, sed nur la maldekstra klavo aktivigas ĝin.</td>
+</tr>
+<tr>
+<td><strong>&gt;</strong></td>
+<td>Uzi la dekstran klavon el la paro.</td>
+</tr>
+</table>
+<p>Eblas tute ellasi modifilojn el klavkomando kaj ligi al unuopa klavo. Ekzemple la jena klavkomando montras la
+agordofenestron je premo de <tt>F12</tt>:
+</p>
+<pre>F12::agordi</pre>
+<p>TajpiSkripto ne atentas usklecon. La jenaj paroj de klavkomandoj agas tute same:</p>
+<pre>
+^+a::agordi
+^+A::AGORDI
+
+>!sPaCe::cIRIla
+>!SpAcE::CiriLA
+</pre>
+<p>
+Ĉion post punktokomo Tajpi traktas kiel komenton, kaj ignoras:
+</p>
+<pre>;ĉi tio estas komento
+^+insert::rusa  ;ĉi tiu klavkomando estas aktiva
+;^+space::rusa   kaj ĉi tiu ne
+</pre>
+<p>
+La nomon de la klavo post la modifiloj oni literumu laŭ la klavnomoj en la menuo ĉe la fundo de la agordofenestro de Tajpi
+(kvankam eblas ellasi spacojn).
+</p>
+<p>
+La jenaj komandoj uzeblas en klavkomando:
+</p>
+<table class="info">
+<tr>
+<th>Komando</th>
+<th>Priskribo</th>
+</tr>
+<tr>
+<td><strong>cirila</strong></td>
+<td>Ŝaltas/malŝaltas transliterumadon de Esperantaj literoj al cirilaj. Kiam esperanta litero tajpiĝas, ĝi aŭtomate aperas
+kiel la plej fonetike simila litero el la cirila alfabeto. Jen la skemo:
+<table class="transliteration">
+<tr>
+<td>a<br/>а</td><td>b<br/>б</td><td>c<br/>ц</td><td>ĉ<br/>ч</td><td>d<br/>д</td><td>e<br/>е</td><td>f<br/>ф</td><td>g<br/>г</td><td>ĝ<br/>ѓ</td><td>h<br/>х</td><td>ĥ<br/>ћ</td><td>i<br/>и</td><td>j<br/>й</td><td>ĵ<br/>ж</td><td>k<br/>к</td><td>l<br/>л</td><td>m<br/>м</td><td>n<br/>н</td><td>o<br/>о</td><td>p<br/>п</td><td>r<br/>р</td><td>s<br/>с</td><td>ŝ<br/>ш</td><td>t<br/>т</td><td>u<br/>у</td><td>ŭ<br/>ў</td><td>v<br/>в</td><td>z<br/>з</td>
+</tr>
+<tr>
+<td>A<br/>А</td><td>B<br/>Б</td><td>C<br/>Ц</td><td>Ĉ<br/>Ч</td><td>D<br/>Д</td><td>E<br/>Е</td><td>F<br/>Ф</td><td>G<br/>Г</td><td>Ĝ<br/>Ѓ</td><td>H<br/>Х</td><td>Ĥ<br/>Ћ</td><td>I<br/>И</td><td>J<br/>Й</td><td>Ĵ<br/>Ж</td><td>K<br/>К</td><td>L<br/>Л</td><td>M<br/>М</td><td>N<br/>Н</td><td>O<br/>О</td><td>P<br/>П</td><td>R<br/>Р</td><td>S<br/>С</td><td>Ŝ<br/>Ш</td><td>T<br/>Т</td><td>U<br/>У</td><td>Ŭ<br/>Ў</td><td>V<br/>В</td><td>Z<br/>З</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><strong>rusa</strong></td>
+<td>Ŝaltas/malŝaltas transliterumadon de Esperantaj literoj al rusaj. Kiam esperanta litero tajpiĝas, ĝi aŭtomate aperas
+kiel la plej fonetike simila litero (aŭ literkombino) el la rusa alfabeto. Jen la skemo, kun la malsamaĵoj kompare kun la cirila skemo koloritaj ruĝe:
+<table class="transliteration">
+<tr>
+<td>a<br/>а</td><td>b<br/>б</td><td>c<br/>ц</td><td>ĉ<br/>ч</td><td>d<br/>д</td><td>e<br/>е</td><td>f<br/>ф</td><td>g<br/>г</td><td>ĝ<br/><span style="color:Red">дж</span></td><td>h<br/>х</td><td>ĥ<br/><span style="color:Red">х</span></td><td>i<br/>и</td><td>j<br/>й</td><td>ĵ<br/>ж</td><td>k<br/>к</td><td>l<br/>л</td><td>m<br/>м</td><td>n<br/>н</td><td>o<br/>о</td><td>p<br/>п</td><td>r<br/>р</td><td>s<br/>с</td><td>ŝ<br/>ш</td><td>t<br/>т</td><td>u<br/>у</td><td>ŭ<br/><span style="color:Red">у</span></td><td>v<br/>в</td><td>z<br/>з</td>
+</tr>
+<tr>
+<td>A<br/>А</td><td>B<br/>Б</td><td>C<br/>Ц</td><td>Ĉ<br/>Ч</td><td>D<br/>Д</td><td>E<br/>Е</td><td>F<br/>Ф</td><td>G<br/>Г</td><td>Ĝ<br/><span style="color:Red">ДЖ</span></td><td>H<br/>Х</td><td>Ĥ<br/><span style="color:Red">Х</span></td><td>I<br/>И</td><td>J<br/>Й</td><td>Ĵ<br/>Ж</td><td>K<br/>К</td><td>L<br/>Л</td><td>M<br/>М</td><td>N<br/>Н</td><td>O<br/>О</td><td>P<br/>П</td><td>R<br/>Р</td><td>S<br/>С</td><td>Ŝ<br/>Ш</td><td>T<br/>Т</td><td>U<br/>У</td><td>Ŭ<br/><span style="color:Red">У</span></td><td>V<br/>В</td><td>Z<br/>З</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><strong>ssigi_elektitan</strong></td>
+<td>Konvertas la elektitan tekston de X-sistemo al supersignaj esperantaj literoj. Uzeblas en tekstkampo aŭ ajna tekstredaktilo
+kiel Word aŭ Notepad.</td>
+</tr>
+<tr>
+<td><strong>ssigi_tondujon</strong></td>
+<td>Konvertas la tekston en la tondujo de X-sistemo al supersignaj esperantaj literoj.</td>
+</tr>
+<tr>
+<td><strong>xigi_elektitan</strong></td>
+<td>Konvertas supersignajn literojn en la elektita teksto al X-sistemo.</td>
+</tr>
+<tr>
+<td><strong>xigi_tondujon</strong></td>
+<td>Konvertas supersignajn literojn en teksto en la tondujo al X-sistemo.</td>
+</tr>
+<tr>
+<td><strong>higi_elektitan</strong></td>
+<td>Konvertas supersignajn literojn en la elektita teksto al H-sistemo.</td>
+</tr>
+<tr>
+<td><strong>higi_tondujon</strong></td>
+<td>Konvertas supersignajn literojn en teksto en la tondujo al H-sistemo.</td>
+</tr>
+<tr>
+<td><strong>htmligi_elektitan</strong></td>
+<td>Konvertas ĉiujn simbolojn en la elektita teksto al HTML-aj surogatoj. Tio ankaŭ povas esti utila por ekscii la unikodan
+numeron de iu simbolo, aŭ serio de simboloj.</td>
+</tr>
+<tr>
+<td><strong>htmligi_tondujon</strong></td>
+<td>Konvertas ĉiujn simbolojn en la teksto en la tondujo al HTML-aj surogatoj.</td>
+</tr>
+<tr>
+<td><strong>###</strong></td>
+<td>La komando povas esti numero kiu reprezentas ajnan unikodan simbolon. Tiun simbolon Tajpi enigas je premo de la
+klavkomando. La jena klavkomando enigas Ĉ je premo de <tt>Ctrl+Alt+C</tt>:
+<pre>^!C::264</pre>
+Eblas specifi hex-numeron per prefikso de "&H". La jena klavkomando sendas la simbolon ♥:
+<pre>^!K::&H2665</pre>
+Ankaŭ eblas specifi plurajn simbolojn en unuopa klavkomando, per apartigo per komo. La jena klavkomando enigas <em>AAA</em>:
+<pre>^!A::65,65,65</pre>
+Vidu <a href="http://www.unicode.org/charts/">ĉi tie</a> por kompleta listo de unikodaj simboloj.
+</td>
+</tr>
+<tr>
+<td><strong>_[text]</strong></td>
+<td>La komando povas esti peco de teksto por enigi en la sistemon. La teksto devas havi substrekon antaŭ ĝi. La jena
+klavkomando enigas <em>eĥoŝanĝo ĉiuĵaŭde</em> je premo de <tt>Alt+E</tt>:
+<pre>!E::_eĥoŝanĝo ĉiuĵaŭde</pre>
+Eblas uzi kodŝanĝajn signojn: \n por nova linio kaj \t por tabo. Necesas meti malsuprenstrekon antaŭ malsuprenstrekoj
+kaj punktokomoj, por ke ili ne traktiĝu kiel kodŝanĝa simbolo aŭ komentosigno.
+</td>
+</tr>
+<tr>
+<td><strong>agordi</strong></td>
+<td>Montras la agordofenestron de Tajpi.</td>
+</tr>
+<tr>
+<td><strong>alglui</strong></td>
+<td>Ŝaltas/malŝaltas la opcion "Alglui el tondujo" en la agordofenestro.</td>
+</tr>
+<tr>
+<td><strong>english</strong></td>
+<td>Ŝanĝas la lingvon de la interfaco al la angla.</td>
+</tr>
+<tr>
+<td><strong>esperanto</strong></td>
+<td>Ŝanĝas la lingvon de la interfaco al Esperanto.</td>
+</tr>
+<tr>
+<td><strong>eliri</strong></td>
+<td>Ĉesigas Tajpi.</td>
+</tr>
+<tr>
+<td><strong>helpo</strong></td>
+<td>Montras la helpodosieron en la lingvo de la interfaco.</td>
+</tr>
+<tr>
+<td><strong>helpo_en</strong></td>
+<td>Montras la anglan holpodosieron.</td>
+</tr>
+<tr>
+<td><strong>helpo_eo</strong></td>
+<td>Montras la esperantan helpodosieron.</td>
+</tr>
+<tr>
+<td><strong>html</strong></td>
+<td>Ŝaltas/malŝaltas la opcion "HTML-aj surogatoj" en la agordofenestro.</td>
+</tr>
+<tr>
+<td><strong>klavkomando</strong></td>
+<td>Ŝaltas/malŝaltas Tajpi. Klavkomando por ĉi tio jam ekzistas en la agordofenestro, sed eblas starigi pliajn.</td>
+</tr>
+<tr>
+<td><strong>latina3</strong></td>
+<td>Ŝaltas la opcion "Latina-3" en la agordofenestro.</td>
+</tr>
+<tr>
+<td><strong>pri_tajpi</strong></td>
+<td>Montras la fenestron "Pri Tajpi".</td>
+</tr>
+<tr>
+<td><strong>skripto</strong></td>
+<td>Ŝaltas/malŝaltas TajpiSkripton.</td>
+</tr>
+<tr>
+<td><strong>unikodo</strong></td>
+<td>Ŝaltas la opcion "Unikodo" en la agordofenestro.</td>
+</tr>
+</table>
+<p>
+Post redakto de skripto necesas konservi la skriptodosieron kaj rekomenci Tajpi. Notu ke TajpiSkripto agnoskas dosierojn
+nur en formatoj ASCII kaj UTF-8. Aliajn formatojn de Unikodo ĝi ne subtenas.
+</p>
+<br />
+<ul>
+<li class="li_links"><a href="Agordo.html">← Agordo</a></li>
+</ul>
+<br />
+<hr />
+<table class="bottom">
+<tr>
+<td>
+© 2008-2011 Thomas James
+</td>
+<td align="right">
+Ĝisdatiĝis je 15-aŭg-2011
+</td>
+</tr>
+<tr>
+<td>
+<a href="mailto:tmj2005@gmail.com">tmj2005@gmail.com</a>
+</td>
+</tr>
+</table>
+</body>
+</html>

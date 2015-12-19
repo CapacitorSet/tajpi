@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd ">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Tajpi - Configuration</title>
+<link rel="stylesheet" href="./styles.css" type="text/css"/>
+</head>
+<body>
+<a href="Index.html" title="Home"><img class="home_icon" alt="Home" src="./flago.png" align="left" /></a>
+<span class="title">
+<em>Tajpi</em> - Esperanto Keyboard<br />
+Configuring the program
+</span>
+<br />
+<br />
+<p>
+This page contains instructions for configuring Tajpi. For information on TajpiScript please go <a href="TajpiScript.html">here</a>.
+</p>
+<p>
+When Tajpi starts up for the first time it will ask you to configure it. The configuration window appears as follows:
+</p>
+<center>
+<img alt="Installer" src="./configuration.png" />
+</center>
+<ul>
+<li class="li_help">Direct keys - When pressing a key from any of the six text boxes, the Esperanto letter printed above
+the text box will be displayed instead. This allows you to simulate a keyboard remap. If you want to input the the actual
+key rather than the Esperanto letter you can hold down <tt>Alt Gr</tt> (or <tt>Ctrl+Alt</tt>)
+while you press the key.</li>
+<li class="li_help">Prefixes - Typing <tt>c</tt>, <tt>g</tt>, <tt>h</tt>, <tt>j</tt>, <tt>s</tt> or <tt>u</tt>
+immediately after a prefix symbol will make the letter appear with a diacritic.</li>
+<li class="li_help">Make prefix character invisible - Prefix characters will not appear when typed in. To make a prefix
+character appear you can type either a space or any other character (except <tt>c</tt>, <tt>g</tt>, <tt>h</tt>, <tt>j</tt>,
+<tt>s</tt> or <tt>u</tt>) after it. This simulates the behaviour of the so-called "dead keys" which exist in some
+standard keyboard layouts.</li>
+<li class="li_help">Suffixes - When one of the configured suffix characters is entered immediately after <tt>c</tt>,
+<tt>g</tt>, <tt>h</tt>, <tt>j</tt>, <tt>s</tt> or <tt>u</tt>, the letter will receive a diacritic. By default the suffixes
+box contains an H, however speakers of some languages (English for example) may wish to remove this so that diacritics
+won't appear when typing "ch", "sh" etc.</li>
+<li class="li_help">Repeat of suffix removes diacritic - Press the suffix key again to remove the diacritic.</li>
+<li class="li_help">Alt Gr + letter to receive diacritic - Pressing <tt>Alt Gr</tt> (or <tt>Ctrl+Alt</tt>)
+together with either <tt>c</tt>, <tt>g</tt>, <tt>h</tt>, <tt>j</tt>, <tt>s</tt> or <tt>u</tt> will make the letter appear
+with a diacritic. For example <tt>Alt Gr+C</tt> would make ĉ appear.</li>
+<li class="li_help">Automatic aŭ/eŭ - A <tt>u</tt> typed after <tt>a</tt> or <tt>e</tt> will appear as ŭ.</li>
+<li class="li_help">w for ŭ - The letter <tt>w</tt> is pressed instead of <tt>u</tt> to show ŭ. This is useful if there is
+a conflict with the system keymap's method for adding a diacritic to u.</li>
+<li class="li_help">Unicode / Latin-3 - Lets you choose between Unicode and Latin-3 character sets. Unicode is recommended,
+but Latin-3 support is included for those who wish to continue using their old Latin-3 fonts or applications that don't
+fully support Unicode.</li>
+<li class="li_help">Paste letter out of clipboard - When selected Tajpi will not input the diacritical letter directly to the
+system, but will instead copy it to the clipboard and paste it out.<br />
+<br />
+Next to this option is a button which you can click on to show the following window, which allows you to configure the
+keystroke Tajpi will use when pasting the letter:
+<center>
+<img alt="Paste Method" src="method.png" />
+</center>
+It is recommended to use <tt>Shift+Insert</tt> but <tt>Ctrl+V</tt> is provided as an alternative and should generally work
+just as well.<br />
+<br />
+Putting the letter in the clipboard will delete whatever was previously stored there, however it is possible to restore the
+contents of the clipboard with the option "Restore clipboard contents after paste". When selected, the contents of the clipboard
+will be automatically restored after the number of milliseconds as specified in the "After ... milliseconds" text box. Please
+note that this only works for text. Files, pictures and other data types are not supported.</li>
+<li class="li_help">HTML entity codes - Tajpi will input HTML entity codes instead of diacritical letters. For example
+&amp;#265; instead of ĉ. Web developers in particular may find this feature
+useful.</li>
+<li class="li_help">Start active - When Tajpi starts it will be in active mode.</li>
+<li class="li_help">Automatic start - Tajpi will automatically start up along with Windows</li>
+<li class="li_help">Hotkey - Configuration for the hotkey which activates / deactivates Tajpi.</li>
+<li class="li_help">Language - You can click on the flags <img alt="Esperanto Flag" src="./eo.gif" /> and
+<img alt="English Flag" src="./en.gif" /> to switch the interface language between Esperanto and English.</li>
+</ul>
+<ul>
+<li class="li_links"><a href="Installation.html">Installation</a></li>
+<li class="li_links"><a href="Index.html">← Home</a></li>
+<li class="li_links"><a href="History.html">Change history</a></li>
+</ul>
+<br />
+<hr />
+<table class="bottom">
+<tr>
+<td>
+© 2008-2012 Thomas James
+</td>
+<td align="right">
+Last updated 26-Feb-2012
+</td>
+</tr>
+<tr>
+<td>
+<a href="mailto:tmj2005@gmail.com">tmj2005@gmail.com</a>
+</td>
+</tr>
+</table>
+</body>
+</html>

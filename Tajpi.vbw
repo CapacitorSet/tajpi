@@ -1,0 +1,14 @@
+FrmConfig = 66, 65, 455, 649, C, 22, 22, 528, 612, C
+ModUtil = 110, 110, 551, 693, 
+ModUnicodeClipboard = 88, 88, 774, 691, C
+UniLabel = 198, 198, 690, 808, C, 66, 66, 572, 656, C
+FrmAbout = 66, 66, 455, 649, C, 44, 44, 433, 634, C
+ModRegistry = 154, 154, 840, 757, 
+ModKeyboard = 49, 10, 799, 629, 
+ModWin32 = 242, 242, 692, 832, C
+FrmMain = 0, 0, 748, 784, C, 87, 77, 835, 667, C
+FrmClipboardMethod = 242, 242, 1086, 832, C, 330, 330, 614, 1032, C
+ModConfig = 132, 132, 933, 679, 
+ModSendInput = 44, 44, 895, 746, 
+ModComplexDeadKeys = 50, 50, 850, 748, 
+ModTajpiScript = 25, 55, 812, 639, Z
